@@ -1,7 +1,14 @@
 editables:
-  functional-helpers/dev@theo/testing:
+  theo_functional-helpers/dev@theo/testing:
     path: functional-helpers
-  bug/dev@issue/testing:
-    path: bug
+  theo_fake-authentication/dev@theo/testing:
+    path: fake-authentication
+  theo_crypto/dev@theo/testing:
+    path: crypto
+  theo_core-cpp/dev@theo/testing:
+    path: core-cpp
+  theo_test-helpers/dev@theo/testing:
+    path: test-helpers
+
 workspace_generator: cmake
-root: bug/dev@issue/testing
+root: theo_fake-authentication/dev@theo/testing
