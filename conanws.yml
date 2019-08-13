@@ -1,0 +1,7 @@
+editables:
+  functional-helpers/dev@theo/testing:
+    path: functional-helpers
+  bug/dev@issue/testing:
+    path: bug
+workspace_generator: cmake
+root: bug/dev@issue/testing
