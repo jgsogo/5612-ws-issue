@@ -1,15 +1,12 @@
-from conans import python_requires
+from conans import ConanFile
 
 
-base = python_requires("theo_conanfile/dev@theo/testing")
-
-class TheoCryptoConan(base.get_conanfile()):
+class TheoCryptoConan(ConanFile):
     name = "theo_crypto"
 
     def build_requirements(self):
-        if self.should_build_tests:
-            self.build_requires("theo_test-helpers/%s@theo/testing" % self.version)
-        super().build_requirements()
+        self.build_requires("theo_test-helpers/%s@theo/testing" % self.version)
 
     def requirements(self):
         self.requires("fmt/5.3.0@bincrafters/stable")
+        

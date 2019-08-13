@@ -1,10 +1,13 @@
 
-echo "==== functional-helpers/dev@theo/testing ==="
-conan create functional-helpers/conanfile.py functional-helpers/dev@theo/testing
-echo "==== theo_conanfile/dev@theo/testing ==="
-conan create theo_conanfile/conanfile.py theo/testing
-echo "==== bug/dev@theo/testing ==="
-conan create bug/conanfile.py bug/version@theo/testing
+conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan 
+
+echo "==== CREATE PACKAGES ==="
+conan create test-helpers theo_test-helpers/dev@theo/testing
+conan create crypto theo_crypto/dev@theo/testing
+conan create fake-authentication theo_fake-authentication/dev@theo/testing
+
 
 echo "==== WORKSPACE ===="
-conan workspace install .
+mkdir build
+cd build
+conan workspace install ..

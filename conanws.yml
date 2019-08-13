@@ -1,12 +1,8 @@
 editables:
-  theo_functional-helpers/dev@theo/testing:
-    path: functional-helpers
   theo_fake-authentication/dev@theo/testing:
     path: fake-authentication
   theo_crypto/dev@theo/testing:
     path: crypto
-  theo_core-cpp/dev@theo/testing:
-    path: core-cpp
   theo_test-helpers/dev@theo/testing:
     path: test-helpers
 
